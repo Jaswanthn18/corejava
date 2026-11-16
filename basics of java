@@ -36,3 +36,291 @@ variables rules
 6. Variable names are case-sensitive.
 7. Can contain letters, digits, underscores and dollar signs after the first character.
 8. Variable names can be of any length.
+----------method explanation-----------
+Scanner method                 Example           Return type
+nextInt()                      25                  int
+nextLong()                     987654321           long 
+nextFloat()                    85.5f               float
+nextDouble()                   25000.75            double
+next()                         Jaswanth             string
+nextLine()                     Hello world          string
+next().charAt(0)                J                   char
+nextBoolean()                  true                 boolean
+-----------code----------------
+import java.util.Scanner;
+class Datatypes{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+int age;
+String name;
+float bank_balance;
+char section;
+double  avg;
+boolean a;
+long num;
+short s;
+byte b;
+System.out.println("enter the int value");
+age=sc.nextInt();
+sc.nextLine();
+System.out.println("enter the String value");
+name=sc.nextLine();
+System.out.println("enter the float value");
+bank_balance=sc.nextFloat();
+System.out.println("enter the char value");
+section=sc.next().charAt(0);
+System.out.println("enter the double value");
+avg=sc.nextDouble();
+System.out.println("enter the long value");
+num=sc.nextLong();
+System.out.println("enter the short value");
+s=sc.nextShort();
+System.out.println("enter the byte value");
+b=sc.nextByte();
+System.out.println("enter the boolean value");
+a=sc.nextBoolean();
+System.out.println("int "+age);
+System.out.println("string "+name);
+
+System.out.println("float "+bank_balance);
+
+System.out.println("char "+section);
+
+System.out.println("double "+avg);
+
+System.out.println("boolean "+a);
+
+System.out.println("long "+num);
+System.out.println("short "+s);
+System.out.println("byte "+b);
+sc.close();
+}
+}
+---------------operators------------
+--------------------1.Arithmetic Operators----------------
+Used to perform mathematical operations.
+Operator           	Meaning                   	Example
++                  	 Addition	                     10 + 5 = 15
+-	                   Subtraction	                 10 - 5 = 5
+*                    Multiplication                10 * 5 = 50
+/	                   Division	                     10 / 5 = 2
+%	                   Modulus (remainder)	         10 % 3 = 1
+---------------code-----------
+import java.util.Scanner;
+
+public class Operators {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        // Arithmetic Operators
+        System.out.println("\nArithmetic:");
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        if (b != 0) {
+            System.out.println("Division: " + (a / b));
+            System.out.println("Modulus: " + (a % b));
+        }
+}
+}
+-----------------2.relational operators----------------
+Used to compare two values. The result is always true or false.
+Operator         	Meaning
+==	              Equal to
+!=	              Not equal to
+>	                Greater than
+<	                Less than
+>=	              Greater than or equal
+<=	              Less than or equal
+-----------------code----------------
+import java.util.Scanner;
+
+public class Operators {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        // relational operators
+        System.out.println("\nRelational:");
+        System.out.println(a == b);
+
+        System.out.println(a != b);
+        System.out.println(a > b);
+        System.out.println(a < b);
+        System.out.println(a <= b);
+        System.out.println(a >= b);
+    }
+}
+-----------------3.Logical Operators-----------------
+
+Used to combine multiple conditions.
+
+| Operator | Meaning |
+|----------|---------|
+| &&       | Logical AND |
+| ||       | Logical OR |
+| !        | Logical NOT |
+---------------code--------------
+import java.util.Scanner;
+
+public class Operators {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        // Arithmetic Operators
+        System.out.println("\nLogical:");
+       
+        System.out.println(a > b && a!=b);
+        System.out.println(a < b || a==b);
+         System.out.println(!(a<b));
+    }
+}*/
+
+INPUT:
+Enter first number: 23
+Enter second number: 34
+
+OUTPUT:
+Logical:
+false
+true
+false
+---------------4.Assignment operator:---------------------
+=	    Simple Assignment	      Takes the value on the right and puts it into the variable on the left
++=	  Add and Assign	        Adds and assigns the result
+-=	  Subtract and Assign	    Subtracts and assigns the resuit
+*=	  Multiply and Assign	    Multiplies and assigns the result
+/=	  Divide and Assign	       Divides and assigns the result
+%=	  Modulo and Assign	       Applies modulus and assigns the result
+----------------code------------------
+import java.util.Scanner;
+
+public class Assignment {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int a = sc.nextInt();
+
+        System.out.println("Original value: " + a);
+
+        a += 5;
+        System.out.println("After += 5: " + a);
+
+        a -= 2;
+        System.out.println("After -= 2: " + a);
+
+        a *= 2;
+        System.out.println("After *= 2: " + a);
+
+        a /= 2;
+        System.out.println("After /= 2: " + a);
+
+        a %= 3;
+        System.out.println("After %= 3: " + a);
+
+        sc.close();
+    }
+}
+-----------5.Increment and Decrement Operators--------------
+Used to increase or decrease a value by 1.
+Operator	         Meaning
+++	                 Increment by 1
+--	                 Decrement by 1
+-------------------code---------------
+
+int a = 10;
+a++;
+System.out.println(a); // 11
+
+a--;
+System.out.println(a); // 10
+
+
+------Pre-increment vs Post-increment-----
+int a = 10;
+System.out.println(++a); // 11
+
+int b = 10;
+System.out.println(b++); // 10
+-------------------------6.Bitwise Operators ------------------------
+Bitwise operators are used to perform operations on individual bits (0s and 1s) of integer values.
+
+In Java, integers are stored in binary form. Bitwise operators work directly on these binary bits.
+1. Types of Bitwise Operators
+Java has 7 main bitwise operators.
+
+| Operator | Name | Function |
+|---|---|---|
+| & | Bitwise AND | Returns 1 if both bits are 1 |
+| | | Bitwise OR | Returns 1 if at least one bit is 1 |
+| ^ | Bitwise XOR | Returns 1 if both bits are different |
+| ~ | Bitwise Complement | Reverses all bits |
+~n=-(n+1)
+| << | Left Shift | Shifts bits to the left |
+a<<k    then
+a*2^k
+| >> | Right Shift | Shifts bits to the right, preserving the sign |
+a>>k    then
+a/2^k
+---------------code-----------------------
+
+class BitwiseOperators {
+    public static void main(String[] args) {
+
+        int a = 5;
+        int b = 3;
+
+        System.out.println("Bitwise AND: " + (a & b));
+
+        System.out.println("Bitwise OR: " + (a | b));
+
+        System.out.println("Bitwise XOR: " + (a ^ b));
+
+        System.out.println("Bitwise NOT: " + (~a));
+
+        System.out.println("Left Shift: " + (a << 1));
+
+        System.out.println("Right Shift: " + (a >> 1));
+
+       
+    }
+}
+output:
+Bitwise AND: 1
+Bitwise OR: 7
+Bitwise XOR: 6
+Bitwise NOT: -6
+Left Shift: 10
+Right Shift: 2
+
+--------------------7.ternary operator--------------------
+It is a short form of the if-else statement.
+
+Syntax:
+condition ? value1 : value2;
+---------------code--------------
+int age = 20;
+String result = (age >= 18) ? "Eligible" : "Not Eligible";
+System.out.println(result);
