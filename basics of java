@@ -13,4 +13,16 @@ HOW JAVA EVOLVED:30 YEARS OF STEADY UPGRADE
 • Java 21 (Sep 2023) : Introduced virtual threads (Project Loom), pattern matching for switch statements, and record patterns.
 • Java 25 (Sep 2025) : Highlighted features include compact source files, scoped values, and compact object headers.
 
-
+Data types
+--------numericals--------
+int
+byte
+double
+float
+long
+short
+-------string-------
+char
+string
+------boolean-----
+boolean
