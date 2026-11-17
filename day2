@@ -155,4 +155,80 @@ System.out.println("enter the valid number");
 }
 }
 }
+-------------------college departments using switch------------
+import java.util.Scanner;
 
+public class College {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("----- COLLEGE DEPARTMENTS -----");
+        System.out.println("1. CSE");
+        System.out.println("2. ECE");
+        System.out.println("3. EEE");
+        System.out.println("4. MECH");
+        System.out.println("5. CIVIL");
+        System.out.println("6. IT");
+        System.out.println("7. AIDS");
+        System.out.println("8. AIML");
+        System.out.println("9. CSE (Cyber Security)");
+        System.out.println("10. CSE (Data Science)");
+        System.out.println("11. Biotechnology");
+        System.out.println("12. Chemical Engineering");
+        System.out.println("13. Automobile Engineering");
+        System.out.println("14. Aeronautical Engineering");
+        System.out.println("15. Mining Engineering");
+
+        System.out.print("Enter department number: ");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+
+            case 1:
+                System.out.println("Computer Science and Engineering");
+                break;
+
+            case 2:
+                System.out.println("Electronics and Communication Engineering");
+                break;
+
+            case 3:
+                System.out.println("Electrical and Electronics Engineering");
+                break;
+
+            case 4:
+                System.out.println("Mechanical Engineering");
+                break;
+
+            case 5:
+                System.out.println("Civil Engineering");
+                break;
+
+            case 6:
+                System.out.println("Information Technology");
+                break;
+
+            case 7:
+                System.out.println("Artificial Intelligence and Data Science");
+                break;
+
+            case 8:
+                System.out.println("Artificial Intelligence and Machine Learning");
+                break;
+
+            case 9:
+                System.out.println("Cyber Security");
+                break;
+
+            case 10:
+                System.out.println("Data Science");
+                break;
+
+            default:
+                System.out.println("Department is available in our college list, but not assigned to a case.");
+        }
+
+        sc.close();
+    }
+}
