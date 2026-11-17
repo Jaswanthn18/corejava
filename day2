@@ -1,0 +1,84 @@
+----------------------control statements-----------------
+  control statements: 3 types
+
+Types of Control Statements:
+
+1. Decision-Making Statements
+
+if, if-else, else-if(ladder), nested if, switch
+
+2. Looping Statements
+
+for, while, do-while, enhanced for
+
+3. Jump Statements
+
+break, continue, return
+# For Each Loop in Java||enhanced for
+The for-each loop in Java is used to access each element of an array or collection one by one without using an index.
+
+It is also called an Enhanced For Loop.
+Syntax
+for(dataType variable : arrayName) {
+    // statements
+}
+--------------------switch--------------
+  
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, choice;
+
+        System.out.print("Enter first number: ");
+        a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        b = sc.nextInt();
+
+        System.out.println("\n1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+
+        System.out.print("Enter your choice: ");
+        choice = sc.nextInt();
+
+        switch(choice) {
+
+            case 1:
+                System.out.println("Addition = " + (a + b));
+                break;
+
+            case 2:
+                System.out.println("Subtraction = " + (a - b));
+                break;
+
+            case 3:
+                System.out.println("Multiplication = " + (a * b));
+                break;
+
+            case 4:
+                if(b != 0) {
+                    System.out.println("Division = " + (a / (double)b));
+                } else {
+                    System.out.println("Cannot divide by zero");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
+```
+SYNTAX:
+Syntax means the rules or structure used to write a program correctly in a programming language.
+
+In simple words, syntax is the correct way of writing code.
+   
