@@ -188,8 +188,8 @@ Meaning: Returns the index of the last occurrence of a character or word.
 String str = "Java Programming";
 System.out.println(str.lastIndexOf('a'));
 Output:
-3
-Explanation: Last a is at index 3.
+10
+Explanation: Last a is at index 10.
 
 13. substring()
 
@@ -209,6 +209,12 @@ String str = "Java Programming";
 System.out.println(str.replace('a', 'o'));
 Output:
 Jovo Programming
+
+4. Difference between replace(), replaceFirst() and replaceAll()
+Method	Function
+replace()	Replaces all matching characters or literal sequences
+replaceFirst()	Replaces the first regex match
+replaceAll()	Replaces all regex matches
 15. concat()
 
 Meaning: Joins two strings.
@@ -226,3 +232,104 @@ String str = "";
 System.out.println(str.isEmpty());
 Output:
 true
+17.strip
+The strip() method removes whitespace (spaces, tabs, etc.) from the beginning and ending of a string.
+
+Syntax:
+string.strip();
+
+
+Example 1: Using strip()
+class Demo {
+    public static void main(String[] args) {
+
+        String s = "   jaswanth   ";
+
+        System.out.println(s.strip());
+    }
+}
+
+
+Output:
+jaswanth
+
+
+Example 2: Difference between strip methods
+Java provides three useful methods:
+Method	Function
+strip()	Removes spaces from both ends
+stripLeading()	Removes spaces from beginning
+stripTrailing()	Removes spaces from ending
+18.repeat
+The repeat() method is used to repeat a string a specified number of times.
+
+Syntax:
+string.repeat(count);
+split() method in Java
+The split() method is used to divide a String into multiple parts based on a specified delimiter.
+19.split
+It returns a String array (String[]).
+1. Syntax
+string.split("regex");
+
+
+- string – Original string.
+- regex – Pattern used to split the string.
+2. Example: Split using space
+class Demo {
+    public static void main(String[] args) {
+
+        String str = "Java Programming Language";
+
+        String[] arr = str.split(" ");
+
+        for(String s : arr) {
+            System.out.println(s);
+        }
+    }
+}
+
+
+Output:
+Java
+Programming
+Language
+
+
+20 join
+class Demo {
+    public static void main(String[] args) {
+
+        String result = String.join("-", "Java", "Python", "C++");
+
+        System.out.println(result);
+    }
+}
+output:
+Java-Python-C++
+21 format
+
+format() method in Java
+The format() method is used to create formatted strings by inserting values into specified positions.
+
+It is useful for displaying numbers, names, decimals, and other values in a particular format.
+1. Syntax
+String.format("format specifier", values);
+
+
+2. Example: Formatting a name
+class Demo {
+    public static void main(String[] args) {
+
+        String name = "Jaswanth";
+        int age = 21;
+
+        String result = String.format("My name is %s and my age is %d", name, age);
+
+        System.out.println(result);
+    }
+}
+
+
+Output:
+My name is Jaswanth and my age is 21
