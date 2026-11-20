@@ -1,0 +1,337 @@
+Inheritance in Java
+Inheritance is an OOP concept in Java where one class acquires the properties (variables) and methods of another class.
+
+In simple words: One class can use the variables and methods of another class.
+
+Inheritance helps us achieve code reusability.
+1. Basic syntax
+class Parent {
+    // Variables and methods
+}
+
+class Child extends Parent {
+    // Variables and methods
+}
+
+
+- Parent – Superclass (Parent class).
+- Child – Subclass (Child class).
+- extends – Keyword used for inheritance.
+2. Simple example
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.eat();  // Parent class method
+        d.bark(); // Child class method
+    }
+}
+
+
+Output:
+Animal is eating
+Dog is barking
+
+
+Explanation:
+1. Animal is the parent class.
+2. Dog is the child class.
+3. Dog extends Animal means Dog inherits Animal.
+4. The Dog object can access both eat() and bark().
+3. Types of Inheritance in Java
+Java supports five commonly discussed types of inheritance.
+
+
+
+
+
+
+
+
+
+
+1. Single Inheritance
+
+One parent class and one child class.
+
+Example: Animal → Dog
+
+class A {
+    void displayA() {
+        System.out.println("Parent class A");
+    }
+}
+
+class B extends A {
+    void displayB() {
+        System.out.println("Child class B");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        B obj = new B();
+
+        obj.displayA();
+        obj.displayB();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+2. Multilevel Inheritance
+
+One class inherits another class, and a third class inherits the second.
+
+Example: Animal → Dog → Puppy
+
+
+class A {
+    void methodA() {
+        System.out.println("Class A");
+    }
+}
+
+class B extends A {
+    void methodB() {
+        System.out.println("Class B");
+    }
+}
+
+class C extends B {
+    void methodC() {
+        System.out.println("Class C");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        C obj = new C();
+
+        obj.methodA();
+        obj.methodB();
+        obj.methodC();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+3. Hierarchical Inheritance
+
+Multiple child classes inherit one parent class.
+
+Example: Animal → Dog, Cat
+
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat is meowing");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        Cat c = new Cat();
+
+        d.eat();
+        d.bark();
+
+        c.eat();
+        c.meow();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+4. Multiple Inheritance
+
+One class inherits from multiple parent classes.
+
+Java does not support this through classes, but supports it through interfaces.
+interface A {
+    void displayA();
+}
+
+interface B {
+    void displayB();
+}
+
+class C implements A, B {
+
+    public void displayA() {
+        System.out.println("Interface A");
+    }
+
+    public void displayB() {
+        System.out.println("Interface B");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        C obj = new C();
+
+        obj.displayA();
+        obj.displayB();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+5. Hybrid Inheritance
+
+Combination of two or more inheritance types.
+
+Java can achieve this using interfaces.
+
+
+
+4. Multilevel Inheritance Example
+class A {
+    void methodA() {
+        System.out.println("Class A");
+    }
+}
+
+class B extends A {
+    void methodB() {
+        System.out.println("Class B");
+    }
+}
+
+class C extends B {
+    void methodC() {
+        System.out.println("Class C");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        C obj = new C();
+
+        obj.methodA();
+        obj.methodB();
+        obj.methodC();
+    }
+}
+
+
+Output:
+Class A
+Class B
+Class C
+
+
+Here, class C can access methods from both A and B.
+5.hybrid inheritance
+interface A {
+    void methodA();
+}
+
+interface B extends A {
+    void methodB();
+}
+
+interface C {
+    void methodC();
+}
+
+class D implements B, C {
+
+    public void methodA() {
+        System.out.println("Interface A");
+    }
+
+    public void methodB() {
+        System.out.println("Interface B");
+    }
+
+    public void methodC() {
+        System.out.println("Interface C");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        D obj = new D();
+
+        obj.methodA();
+        obj.methodB();
+        obj.methodC();
+    }
+}
+
+
+
+
+
+Important keywords
+Keyword	Purpose
+extends	Inherits a class
+implements	Implements an interface
+super	Accesses parent class members
+this	Refers to current object
+
+6. Advantages of Inheritance
+1. Code reusability.
+2. Reduces code duplication.
+3. Supports method overriding.
+4. Achieves runtime polymorphism.
+5. Makes code easier to maintain.
